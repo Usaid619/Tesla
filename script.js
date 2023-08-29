@@ -162,7 +162,7 @@ stucks.forEach(stuck=>{
             scrub:1,
             // markers:true,
             start: "top top",
-            end: "80% top",
+            end: "55% top",
             pin:true
         }
     })
