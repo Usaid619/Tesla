@@ -132,7 +132,8 @@ tl
 .from(".item-name",{
     y: "40",
     opacity:0,
-    duration: .4
+    duration: .4,
+    delay:.5
 })
 .from(".item-description",{
     y: "20",
@@ -162,7 +163,7 @@ stucks.forEach(stuck=>{
             scrub:1,
             // markers:true,
             start: "top top",
-            end: "55% top",
+            end: "40% top",
             pin:true
         }
     })

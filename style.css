@@ -19,7 +19,7 @@ body{
 .main{
     height: 100vh;
     overflow: scroll;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
@@ -262,8 +262,8 @@ transition: all .5s ease;
 /* Main Page Products */
 
 .product{
-    scroll-snap-align: start;
     scroll-snap-stop: always;
+    scroll-snap-align: start;
     position: relative;
     display: flex;
     align-items: center;
@@ -271,7 +271,6 @@ transition: all .5s ease;
     flex-direction: column;
     height: 100dvh;
     padding-bottom: 6em;
-
 }
 
 .product-name{
@@ -425,6 +424,8 @@ color: white;
 
 /* Footer */
 footer{
+    scroll-snap-align: end;
+    scroll-snap-stop: always;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -523,12 +524,17 @@ footer > ul > li > a{
 
 @media all and (max-width:800px){
     footer{
+        height: 100vh;
         background-color: black;
         color: white;
         transform: translateY(100%);
     }
 
     footer > ul {
+        justify-content: space-around;
+        align-items: center;
+        height: 50%;
+        width: 70%;
         flex-direction: column;
     }
 }
