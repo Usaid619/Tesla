@@ -140,51 +140,31 @@ tl
     duration: .4,
     stagger:.3
 })
-
 .from(".btn:nth-child(1)",{
     x:-20,
     // duration:.5,
     opacity:0
 },"a")
-
 .from(".btn:nth-child(2)",{
     x:20,
     // duration:.5,
     opacity:0
 },"a")
 
-// gsap.to("#stuck-1",{
-// opacity:0,
-// scrollTrigger:{
-//     trigger: "#stuck-1",
-//     start: "top top",
-//     end: "40% top",
-//     // markers:true,
-//     scrub:1,
-//     pin:true
-// }
-// })
+let stucks = gsap.utils.toArray(".stuck")
 
-// gsap.from("#stuck-2",{
-//     opacity:0,
-//     scrollTrigger:{
-//         trigger: "#stuck-2",
-//         start: "top 10%",
-//         end: "top top",
-//         // markers:true,
-//         scrub:1,
-//         // pin:true
-//     }
-// })
+stucks.forEach(stuck=>{
+    gsap.to(stuck,{
+        opacity:0,
+        scrollTrigger:{
+            trigger: stuck,
+            scroller: ".main",
+            scrub:1,
+            // markers:true,
+            start: "top top",
+            end: "80% top",
+            pin:true
+        }
+    })
+})
 
-// gsap.to("#stuck-2",{
-//     opacity:0,
-//     scrollTrigger:{
-//         trigger: "#stuck-2",
-//         start: "top top",
-//         end: "40% top",
-//         markers:true,
-//         scrub:1,
-//         pin:true
-//     }
-//     })
