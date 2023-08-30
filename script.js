@@ -1,3 +1,4 @@
+// Declaring Variables
 const body = document.querySelector("body")
 const overlay = document.querySelector(".overlay")
 const dropdown = document.querySelector(".drop-down")
@@ -5,18 +6,19 @@ const header = document.querySelector("header")
 const logo = document.querySelector(".logo")
 const navs = Array.from(document.querySelectorAll(".nav-link"))
 const sideMenuBtn = document.querySelector("#ham-menu-btn")
+// Flags
+let check = 0
 
+// Making Functions
     function stopScrolling(){
     body.style.overflow = "hidden"
     }
     function startScrolling(){
     body.style.overflow = "visible"
     }
-
     function adjustHeight(childHeight){
     dropdown.style.height = `${childHeight + 140}px`
     }
-
     function showContent(){
         const target = this.textContent.toLowerCase()
     
@@ -69,21 +71,18 @@ const sideMenuBtn = document.querySelector("#ham-menu-btn")
             header.style.color = "white"
         }
     }
-
     function addEventListeners(){
         console.log("added")
         navs.forEach((nav)=>{
             nav.addEventListener("mouseenter",showContent)
         }) 
     }
-
     function removeEventListeners(){
         console.log("removed Master")
         navs.forEach((nav)=>{
             nav.removeEventListener("mouseenter",showContent)
         }) 
     }
-    
     function checkWidth(){
         if(window.innerWidth > 1200){
             header.style.visibility = "visible"
@@ -94,9 +93,7 @@ const sideMenuBtn = document.querySelector("#ham-menu-btn")
         }
     }
     
-    
-let check = 0
-function toggleMenu(){
+    function toggleMenu(){
     if(check == 0){
         stopScrolling()
         logo.style.fill = "black"
@@ -117,15 +114,14 @@ function toggleMenu(){
         check = 0
     }
     
-}
-sideMenuBtn.addEventListener("click",toggleMenu)
+    }
+
+    sideMenuBtn.addEventListener("click",toggleMenu)
 
     checkWidth()
     window.addEventListener("resize",checkWidth)
 
-
 // Gsap Animations
-
 const tl = gsap.timeline()
 
 tl

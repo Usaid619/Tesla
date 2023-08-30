@@ -27,22 +27,18 @@ body{
 /* For Webkit browsers */
 ::-webkit-scrollbar {
     display: none;
-    width: 6px; /* Width of the vertical scrollbar */
+    width: 6px;
 }
-
 ::-webkit-scrollbar-thumb {
-    background-color: #bebdbd; /* Color of the thumb */
+    background-color: #bebdbd;
     border-radius: 5px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #1d1d1d; /* Color of the thumb on hover */
+    background-color: #1d1d1d;
 }
-
 ::-webkit-scrollbar-track{
-    background-color: #000000; /* Color of the background*/
+    background-color: #000000;
 }
-
 
 .main{
 }
@@ -62,7 +58,6 @@ header{
     color: white;
     transition: all 1s ease;
 }
-
 .logo{
     margin-left: -20px;
     height: 80px;
@@ -70,12 +65,10 @@ header{
     fill: white;
     transition: all 1s ease;
 }
-
 .h-middle > ul{
     display: flex;
     gap: 30px;
 }
-
 .h-middle > ul > li{
     list-style: none;
     font-weight: 400;
@@ -83,31 +76,26 @@ header{
     border-radius: 4px;
     padding: 4px 12px;
 }
-
 .h-middle > ul > li:hover{
     cursor: pointer;
     background-color: #a19f9f7c;
 }
-
 .h-right{
     display: flex;
     gap: 20px;
     font-size: 25px;
 }
-
 .h-right > i{
     cursor: pointer;
     transition: all .1s ease;
     padding: 2px 4px;
     border-radius: 4px;
 }
-
 .h-right >i:hover{
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     color: white;
 }
-
 
 /* Overlay */
 .overlay{
@@ -138,29 +126,21 @@ header{
     width: 100%;
     background-color: rgb(255, 255, 255);
     transition: all 1s ease;
-    /* overflow: hidden; */
 }
-
 .visible{
     transform: translateY(0);
 }
-
 .menu-elem{
     display: flex;
     justify-content: center;
-    /* align-items: flex-end; */
     margin-top: 80px;
     visibility: hidden;
     opacity: 0;
-    /* gap: 20px; */
     position: absolute;
     height: auto;
     width: 70%;
-    /* background-color: red; */
-    /* border: 3px solid rgb(255, 0, 0); */
     transition: all .4s ease;
 }
-
 .products-div{
     display: flex;
     justify-content: flex-start;
@@ -168,26 +148,20 @@ header{
     padding: 10px 0;
     gap: 25px;
     flex: 1 1 70%;
-    /* background-color: green; */
 }
-
 .product-card{
     display: flex;
     flex-direction: column;
     gap: 10px;
     height: auto;
     width: 200px;
-    /* background-color: lightblue; */
 }
-
 .product-card > img{
     width: 100%;
 }
-
 .product-card > img:hover{
     cursor: pointer;
 }
-
 .product-card > .info{
     display: flex;
     justify-content: space-between;
@@ -195,22 +169,17 @@ header{
     flex-direction: column;
 height: auto;
 width: 100%;
-/* background-color: salmon; */
 }
-
 .info > h2{
     font-size: 16px;
 }
-
 .learn-div{
     display: flex;
     gap: 10px;
 }
-
 .learn-div > span:hover{
     cursor: pointer;
 }
-
 .learn-div > span > a{
     font-size: 12px;
     color: #414141d5;
@@ -218,41 +187,34 @@ width: 100%;
     cursor: pointer;
     transition: all .5s ease;
 }
-
 .learn-div > span > a:hover{
     text-decoration-color: black;
     text-decoration-thickness: 1.6px;
 }
-
 .side-menu{
     display: flex;
     justify-content: flex-start;
     flex: 1 1 20%;
-/* background-color: rgb(3, 248, 236); */
-color: black;
-padding: 30px 0 30px 40px;
-border-left: 1px solid rgba(150, 150, 150, 0.774);
+    color: black;
+    padding: 30px 0 30px 40px;
+    border-left: 1px solid rgba(150, 150, 150, 0.774);
 }
-
 .discover > .side-menu{
     justify-content: space-around;
     border: none;
 }
-
 .side-menu > ul{
     display: flex;
     flex-direction: column;
     gap: 20px;
 list-style: none;
 }
-
 .side-menu > ul > li > a{
     font-weight: 500;
 color: inherit;
 text-decoration: none;
 transition: all .5s ease;
 }
-
 .side-menu > ul > li > a:hover{
     text-decoration: underline;
     text-decoration-color: black;
@@ -260,7 +222,6 @@ transition: all .5s ease;
 }
 
 /* Main Page Products */
-
 .product{
     scroll-snap-stop: always;
     scroll-snap-align: start;
@@ -272,7 +233,6 @@ transition: all .5s ease;
     height: 100dvh;
     padding-bottom: 6em;
 }
-
 .product-name{
     display: flex;
     flex-direction: column;
@@ -282,23 +242,19 @@ transition: all .5s ease;
     margin-top: 100px;
     color: white;
 }
-
 .product-name > h2{
     font-size: clamp(40px,4vw,54px);
     margin-bottom: 10px;
 }
-
 .item-description{
     font-size: clamp(12px,1vw,20px);
 }
 
 /* Buttons */
-
 .cta-buttons-div{
 display: flex;
 gap: 12px;
 }
-
 .btn{
     padding: .8em 6em;
     color: black;
@@ -311,7 +267,6 @@ gap: 12px;
     font-weight: 600;
     cursor: pointer;
 }
-
 #ham-menu-btn{
     display: none;
     position: fixed;
@@ -326,13 +281,11 @@ gap: 12px;
     z-index: 4;
     cursor: pointer;
 }
-
 #secondary-btn{
 border: 3px solid white;
 background-color: transparent;
 color: white;
 }
-
 #ghost-btn{
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
@@ -345,7 +298,6 @@ color: white;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid red; */
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -417,7 +369,7 @@ color: white;
     background-size: cover;
 }
 
-
+/* Black Texts */
 .black *{
     color: black;
 }
@@ -431,29 +383,22 @@ footer{
     justify-content: center;
     position: absolute;
     bottom: 0;
-    /* height: 90px; */
     width: 100%;
     padding: 1.4em 2em;
-    /* background-color: black; */
 }
-
 footer > ul{
     display: flex;
     align-items: center;
     gap: 18px;
     text-align: center;
     list-style: none;
-    /* background-color: pink; */
 }
-
 footer > ul > li > a{
-    /* background-color: green; */
     color: #f1f1f1;
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
 }
-
 
 /* Media Queries */
 @media all and (max-width:1200px){
@@ -468,30 +413,23 @@ footer > ul > li > a{
       color: black !important;
       transition: all .3s ease;
     }
-
     .h-middle{
-        /* border: 1px solid green; */
         width: 100%;
     }
-
     .h-middle > ul{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        /* background-color: red; */
     }
-
     .h-middle > ul > li{
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        /* background-color: red; */
         height: 50px;
         width: 100%;
         transition: all .3s ease;
     }
-
     .h-middle > ul > li:hover{
         display: flex;
         justify-content: center;
@@ -501,13 +439,11 @@ footer > ul > li > a{
         height: 50px;
         width: 100%;
     }
-
     .h-right{
         gap: 40px;
         margin-bottom: 40px;
         font-size: 32px;
     }
-
     .h-right > i:hover{
         background-color: rgb(212, 212, 212);
     }
@@ -515,7 +451,6 @@ footer > ul > li > a{
     /* Ham-Menu */
     #ham-menu-btn{
         display: block;
-       
     }
     .drop-down{
         height: 100vh;
@@ -529,7 +464,6 @@ footer > ul > li > a{
         color: white;
         transform: translateY(100%);
     }
-
     footer > ul {
         justify-content: space-around;
         align-items: center;
@@ -544,5 +478,4 @@ footer > ul > li > a{
         flex-direction: column;
         width: 90%;
     }
-
 }
