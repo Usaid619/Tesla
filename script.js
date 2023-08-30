@@ -124,29 +124,31 @@ let check = 0
 // Gsap Animations
 const tl = gsap.timeline()
 
-tl
-.from(".item-name",{
-    y: "40",
-    opacity:0,
-    duration: .4,
-    delay:.5
-})
-.from(".item-description",{
-    y: "20",
-    opacity:0,
-    duration: .4,
-    stagger:.3
-})
-.from(".btn:nth-child(1)",{
-    x:-20,
-    // duration:.5,
-    opacity:0
-},"a")
-.from(".btn:nth-child(2)",{
-    x:20,
-    // duration:.5,
-    opacity:0
-},"a")
+function startAnimating(){
+    tl
+    .from(".item-name",{
+        y: "40",
+        opacity:0,
+        duration: .6,
+    })
+    .from(".item-description",{
+        y: "20",
+        opacity:0,
+        duration: .4,
+    })
+    .from(".btn:nth-child(1)",{
+        x:-20,
+        duration:.8,
+        opacity:0
+    },"a")
+    .from(".btn:nth-child(2)",{
+        x:20,
+        duration:.8,
+        opacity:0
+    },"a")
+}
+
+window.addEventListener("load",startAnimating)
 
 let stucks = gsap.utils.toArray(".stuck")
 
