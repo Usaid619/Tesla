@@ -246,6 +246,11 @@ transition: all .5s ease;
     font-size: clamp(40px,4vw,54px);
     margin-bottom: 10px;
 }
+
+.item-name{
+    text-align: center;
+}
+
 .item-description{
     font-size: clamp(12px,1vw,20px);
 }
