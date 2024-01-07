@@ -72,13 +72,11 @@ let check = 0
         }
     }
     function addEventListeners(){
-        console.log("added")
         navs.forEach((nav)=>{
             nav.addEventListener("mouseenter",showContent)
         }) 
     }
     function removeEventListeners(){
-        console.log("removed Master")
         navs.forEach((nav)=>{
             nav.removeEventListener("mouseenter",showContent)
         }) 
