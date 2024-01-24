@@ -1,0 +1,486 @@
+/* Importing Font */
+@font-face{
+    font-family: gotham;
+    src: url(./Assets/Fonts/GothamSSm-Medium_Web.woff2);
+}
+
+/*Basic Styling  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+body{
+    font-family: gotham;
+}
+
+.main{
+    height: 100vh;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+/* ScrollBar */
+/* For Webkit browsers */
+::-webkit-scrollbar {
+    display: none;
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #bebdbd;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #1d1d1d;
+}
+::-webkit-scrollbar-track{
+    background-color: #000000;
+}
+
+.main{
+}
+
+/* Header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 3em;
+    background-color: transparent;
+    color: white;
+    transition: all 1s ease;
+}
+.logo{
+    margin-left: -20px;
+    height: 80px;
+    width: 140px;
+    fill: white;
+    transition: all 1s ease;
+}
+.h-middle > ul{
+    display: flex;
+    gap: 30px;
+}
+.h-middle > ul > li{
+    list-style: none;
+    font-weight: 400;
+    transition: all .1s ease;
+    border-radius: 4px;
+    padding: 4px 12px;
+}
+.h-middle > ul > li:hover{
+    cursor: pointer;
+    background-color: #a19f9f7c;
+}
+.h-right{
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+}
+.h-right > i{
+    cursor: pointer;
+    transition: all .1s ease;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.h-right >i:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+/* Overlay */
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.767);
+    backdrop-filter: blur(2px);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+/* Drop-Down */
+.drop-down{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    transform: translateY(-100%);
+    height: auto;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: all 1s ease;
+}
+.visible{
+    transform: translateY(0);
+}
+.menu-elem{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    height: auto;
+    width: 70%;
+    transition: all .4s ease;
+}
+.products-div{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    gap: 25px;
+    flex: 1 1 70%;
+}
+.product-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    width: 200px;
+}
+.product-card > img{
+    width: 100%;
+}
+.product-card > img:hover{
+    cursor: pointer;
+}
+.product-card > .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+height: auto;
+width: 100%;
+}
+.info > h2{
+    font-size: 16px;
+}
+.learn-div{
+    display: flex;
+    gap: 10px;
+}
+.learn-div > span:hover{
+    cursor: pointer;
+}
+.learn-div > span > a{
+    font-size: 12px;
+    color: #414141d5;
+    text-underline-offset: 2px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.learn-div > span > a:hover{
+    text-decoration-color: black;
+    text-decoration-thickness: 1.6px;
+}
+.side-menu{
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 20%;
+    color: black;
+    padding: 30px 0 30px 40px;
+    border-left: 1px solid rgba(150, 150, 150, 0.774);
+}
+.discover > .side-menu{
+    justify-content: space-around;
+    border: none;
+}
+.side-menu > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+list-style: none;
+}
+.side-menu > ul > li > a{
+    font-weight: 500;
+color: inherit;
+text-decoration: none;
+transition: all .5s ease;
+}
+.side-menu > ul > li > a:hover{
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 1.6px;
+}
+
+/* Main Page Products */
+.product{
+    scroll-snap-stop: always;
+    scroll-snap-align: start;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100dvh;
+    padding-bottom: 6em;
+}
+.product-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    margin-top: 100px;
+    color: white;
+}
+.product-name > h2{
+    font-size: clamp(40px,4vw,54px);
+    margin-bottom: 10px;
+}
+
+.item-name{
+    text-align: center;
+}
+
+.item-description{
+    font-size: clamp(12px,1vw,20px);
+}
+
+/* Buttons */
+.cta-buttons-div{
+display: flex;
+gap: 12px;
+}
+.btn{
+    padding: .8em 6em;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: clamp(14px,1.2vw,18px);
+    font-weight: 600;
+    cursor: pointer;
+}
+#ham-menu-btn{
+    display: none;
+    position: fixed;
+    top: 2%;
+    right: 1%;
+    padding: 0.6em 1.4em;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+    font-weight: 100;
+    z-index: 4;
+    cursor: pointer;
+}
+#secondary-btn{
+border: 3px solid white;
+background-color: transparent;
+color: white;
+}
+#ghost-btn{
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+/* Stuck */
+.stuck{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Product 1 */
+.product-1 > video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Product 2 */
+.product-2{
+    background:url(./Assets/Images/Model-Y.avif) no-repeat center;
+    background-size: cover;
+}
+
+/* Product 3 */
+.product-3{
+    background: url(./Assets/Images/Model-S.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#stuck-3 a{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+/* Product 4 */
+.product-4{
+    background: url(./Assets/Images/Model-X.avif) no-repeat center;
+    background-size: cover;
+}
+
+/* Product 5 */
+.product-5{
+    background: url(./Assets/Images/Model-S.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* Product 6 */
+.product-6{
+    background: url(./Assets/Images/Solar-Panels.avif) no-repeat center;
+    background-size: cover;
+}
+
+/* Product 7 */
+.product-7{
+    background: url(./Assets/Images/Solar-Roof.avif) no-repeat center;
+    background-size: cover;
+}
+
+/* Product 8 */
+.product-8{
+    background: url(./Assets/Images/Powerwall.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* Product 9 */
+.product-9{
+    position: relative;
+    background: url(./Assets/Images/Accessories.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* Black Texts */
+.black *{
+    color: black;
+}
+
+/* Footer */
+footer{
+    scroll-snap-align: end;
+    scroll-snap-stop: always;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1.4em 2em;
+}
+footer > ul{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+    list-style: none;
+}
+footer > ul > li > a{
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Media Queries */
+@media all and (max-width:1200px){
+    /* Header navigation */
+    header{
+        visibility: hidden;
+        opacity: 0;
+        flex-direction: column;
+      height: 100dvh;
+      width: 100%;
+      background-color: white;
+      color: black !important;
+      transition: all .3s ease;
+    }
+    .h-middle{
+        width: 100%;
+    }
+    .h-middle > ul{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .h-middle > ul > li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 50px;
+        width: 100%;
+        transition: all .3s ease;
+    }
+    .h-middle > ul > li:hover{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(212, 212, 212);
+        height: 50px;
+        width: 100%;
+    }
+    .h-right{
+        gap: 40px;
+        margin-bottom: 40px;
+        font-size: 32px;
+    }
+    .h-right > i:hover{
+        background-color: rgb(212, 212, 212);
+    }
+
+    /* Ham-Menu */
+    #ham-menu-btn{
+        display: block;
+    }
+    .drop-down{
+        height: 100vh;
+    }
+}
+
+@media all and (max-width:800px){
+    footer{
+        height: 100vh;
+        background-color: black;
+        color: white;
+        transform: translateY(100%);
+    }
+    footer > ul {
+        justify-content: space-around;
+        align-items: center;
+        height: 50%;
+        width: 70%;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width:600px){
+    .cta-buttons-div{
+        flex-direction: column;
+        width: 90%;
+    }
+}
