@@ -72,7 +72,6 @@ let check = 0
         }
     }
     function addEventListeners(){
-        console.log("added")
         navs.forEach((nav)=>{
             nav.addEventListener("mouseenter",showContent)
         }) 
@@ -165,3 +164,4 @@ stucks.forEach(stuck=>{
         }
     })
 })
+
