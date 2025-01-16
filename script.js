@@ -124,6 +124,9 @@ const tl = gsap.timeline()
 
 function startAnimating(){
     tl
+    .from(".stuck",{
+        autoAlpha:0
+    })
     .from(".item-name",{
         y: "40",
         opacity:0,
